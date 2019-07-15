@@ -5,7 +5,7 @@
   "main": "",
   "scripts": {
     "start": "npm start --prefix backend",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix backend && npm run heroku-postbuild"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix backend && npm run heroku-postbuild --prefix backend"
   },
   "keywords": [],
   "author": "",
