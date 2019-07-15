@@ -13,7 +13,7 @@ app.use(cors())
 app.use(express.json())
 
 // BD Conexão
-const URI = process.env.BD_URI
+const URI = 'mongodb+srv://pires123:pires123@cluster0-luvj7.mongodb.net/test?retryWrites=true&w=majority'
 mongoose
   .connect(URI, { useNewUrlParser: true, useCreateIndex: true })
 const connection = mongoose.connection
