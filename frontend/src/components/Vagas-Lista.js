@@ -17,7 +17,7 @@ import Dialog from '@material-ui/core/Dialog'
 import CloseIcon from '@material-ui/icons/Close'
 import DialogTitle from '@material-ui/core/DialogTitle'
 import DialogContent from '@material-ui/core/DialogContent'
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT
 
 const Vaga = props => (
   <Grid item>

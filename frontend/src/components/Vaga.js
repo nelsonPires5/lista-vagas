@@ -6,7 +6,7 @@ import CssBaseline from '@material-ui/core/CssBaseline'
 import TextField from '@material-ui/core/TextField'
 import Container from '@material-ui/core/Container'
 import Typography from '@material-ui/core/Typography'
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT
 
 export default class Vaga extends Component {
   constructor (props) {
