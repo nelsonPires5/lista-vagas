@@ -17,7 +17,6 @@ import Dialog from '@material-ui/core/Dialog'
 import CloseIcon from '@material-ui/icons/Close'
 import DialogTitle from '@material-ui/core/DialogTitle'
 import DialogContent from '@material-ui/core/DialogContent'
-const PORT = process.env.PORT || 5000
 
 const Vaga = props => (
   <Grid item>
@@ -121,7 +120,7 @@ export default class VagasLista extends Component {
   // Métodos
   componentDidMount () {
     axios
-      .get('http://localhost:' + PORT + '/api/vagas/')
+      .get('/api/vagas/')
       .then(res => {
         this.setState({ vagas: res.data })
       })
@@ -156,7 +155,7 @@ export default class VagasLista extends Component {
     console.log('Clicando em Saber mais')
     this.handleOpen()
     axios
-      .get('http://localhost:' + PORT + '/api/vagas/find/' + id)
+      .get('/api/vagas/find/' + id)
       .then(res => this.setState({ data: res.data }))
       .catch(err => console.log('Error: ' + err))
   }
@@ -169,7 +168,7 @@ export default class VagasLista extends Component {
   onRemove (id) {
     console.log('Clicando no botão Remover')
     axios
-      .delete('http://localhost:' + PORT + '/api/vagas/' + id)
+      .delete('/api/vagas/' + id)
       .then(res => console.log(res.data))
       .catch(err => console.log('Error: ' + err))
 

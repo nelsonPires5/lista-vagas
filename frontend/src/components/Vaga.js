@@ -6,7 +6,6 @@ import CssBaseline from '@material-ui/core/CssBaseline'
 import TextField from '@material-ui/core/TextField'
 import Container from '@material-ui/core/Container'
 import Typography from '@material-ui/core/Typography'
-const PORT = process.env.PORT || 5000
 
 export default class Vaga extends Component {
   constructor (props) {
@@ -71,7 +70,7 @@ export default class Vaga extends Component {
       console.log(vaga)
 
       axios
-        .post('http://localhost:' + PORT + '/api/vagas/add', vaga)
+        .post('/api/vagas/add', vaga)
         .then(res => console.log(res.data))
 
       this.setState({
